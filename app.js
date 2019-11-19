@@ -9,7 +9,12 @@ app.controller('MainCtrl', function($scope, $http) {
   };
 
   $scope.loadCountry = function(query) {
-    return $http.get('country.json');
+    return $http.get('country.json').then(function(response) {
+       var countries = response.data;
+       return countries.filter(function(country) {
+       return country.text.toLowerCase().indexOf(query.toLowerCase()) != -1;
+      });
+    });
   };
 
   $scope.loadState = function(query) {
