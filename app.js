@@ -1,8 +1,6 @@
 var app = angular.module('dummy', ['ngTagsInput']);
 
 app.controller('MainCtrl', function($scope, $http) {
-  $scope.iata1 = [
-  ];
    
   $scope.loadIATA = function(query) {
     return $http.get('iata.json').then(function(response) {

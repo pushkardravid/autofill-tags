@@ -58,7 +58,7 @@
     </tags-input>
     <!-- <p>Model: {{iata1}}</p>   -->
 
-    <tags-input ng-model="country1" add-on-paste="true" placeholder="Enter Country">
+    <tags-input ng-model="country1" add-on-paste="true" add-from-autocomplete-only="true" placeholder="Enter Country">
       <auto-complete source="loadCountry($query)"></auto-complete>
     </tags-input>
   </div>
@@ -77,7 +77,7 @@
     </tags-input>
     <!-- <p>Model: {{iata1}}</p>   -->
 
-    <tags-input ng-model="country2" add-on-paste="true" placeholder="Enter Country">
+    <tags-input ng-model="country2" add-on-paste="true" add-from-autocomplete-only="true" placeholder="Enter Country">
       <auto-complete source="loadCountry($query)"></auto-complete>
     </tags-input>
 
